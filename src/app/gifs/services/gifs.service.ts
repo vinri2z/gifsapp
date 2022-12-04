@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class GifsService {
   private _history: string[] = [];
+  private _url: string = 'api.giphy.com/v1/gifs/search';
   constructor() {}
   get history() {
     return [...this._history];
