@@ -9,8 +9,16 @@ export class GifsService {
   get history() {
     return [...this._history];
   }
-  buscarGifs(query: string) {
+  buscarGifs(query: string): void {
+    query = query.trim().toLowerCase();
+
+    // if query string is empty do not search
+    if (!query) return;
+
+    // if query string already in history do not search
+    if (this._history.includes(query)) return;
+
     this._history.unshift(query);
-    this._history = this._history.slice(0, 10);
+    this._history = this._history.splice(0, 10);
   }
 }
