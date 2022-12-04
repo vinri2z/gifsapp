@@ -44,5 +44,6 @@ yarn-error.log
 Thumbs.db
 
 # Angular
-.angular
+/.angular
+
 
