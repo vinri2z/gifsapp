@@ -2,11 +2,12 @@
   <h1 class="text-light">GIFs App</h1>
   <hr class="text-white" />
   <div class="list-group list-reset">
-    <a
+    <button
       *ngFor="let historyItem of history"
-      href="#"
+      (click)="load(historyItem)"
       class="list-group-item list-group-item-action"
-      >{{ historyItem | titlecase }}</a
     >
+      {{ historyItem | titlecase }}
+    </button>
   </div>
 </div>

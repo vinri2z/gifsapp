@@ -11,4 +11,7 @@ export class SidebarComponent {
   get history() {
     return [...this.gifsService.history];
   }
+  load(historyItem: string) {
+    this.gifsService.buscarGifs(historyItem);
+  }
 }
